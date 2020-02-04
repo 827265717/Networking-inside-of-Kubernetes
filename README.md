@@ -22,10 +22,11 @@ Horizontally scaling databases (>1 cluster) [3]
 
 ## 3. Scope and Features Of The Project:[Geng]
 The scope of the project aims at large scale metadata stored in Etcd which need to be updated in time. Instead of Raft consensus algorithm, gossip protocol discards the “leader approach” and saves the cost of time to leader election and. Having one leader create a one point of failure not to mention that the leader has to communicate with all nodes for an update. Failure detection guarantee the reliability of the network from periodically pinging each node by its neighbors, which mitigates the  average error rate during the process of handshake.
+
 Therefore, the main features are:
-Handling updates across global metadata in higher speed by gossip protocol
-Responding to client requests quicker 
-Failure detection ensures the robustness and reliability of the network
+- Handling updates across global metadata in higher speed by gossip protocol
+- Responding to client requests quicker 
+- Failure detection ensures the robustness and reliability of the network
 
 ## 4. Solution Concept:[Alex]
 A high-level outline of the solution:
